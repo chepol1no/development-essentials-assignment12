@@ -24,3 +24,10 @@ print(corrected_net_income)
 second_quarter = corrected_net_income[:, 3:6]
 
 print(second_quarter)
+
+q2_totals = second_quarter.sum(axis=1)
+
+print("\n--- Total Net Income for Q2 ---")
+
+for department, total in enumerate(q2_totals, start=1):
+    print(f"Department {department}: {total:.2f}")
